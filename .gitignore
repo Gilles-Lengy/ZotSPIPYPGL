@@ -1,0 +1,8 @@
+/*
+!/plugins
+/plugins/*
+!/plugins/auto/
+/plugins/auto/*
+!/plugins/auto/zotspip/
+!/squelettes
+!.gitignore
