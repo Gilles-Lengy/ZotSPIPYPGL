@@ -1,6 +1,6 @@
 <?php
 
-// Sécurité
+// Sï¿½curitï¿½
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 function zotspip_insert_head($flux){
@@ -105,6 +105,13 @@ function replaceTree($search="", $replace="", $array=false, $keys_too=false)
         $newArr[$add_key] = replaceTree($search, $replace, $v, $keys_too);
     }
     return $newArr;
+}
+
+// http://forum.spip.net/fr_263543.html
+function zotspiprecherche_rechercher_liste_des_champs($tables) {
+    $tables['zitem']['titre'] = 10;
+    $tables['zitem']['resume'] = 7;
+    return $tables;
 }
 
 ?>
