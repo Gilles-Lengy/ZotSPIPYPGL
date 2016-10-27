@@ -108,7 +108,7 @@ function replaceTree($search="", $replace="", $array=false, $keys_too=false)
 }
 
 // http://forum.spip.net/fr_263543.html
-function zotspiprecherche_rechercher_liste_des_champs($tables) {
+function zotspip_rechercher_liste_des_champs($tables) {
     $tables['zitem']['titre'] = 10;
     $tables['zitem']['resume'] = 7;
     return $tables;

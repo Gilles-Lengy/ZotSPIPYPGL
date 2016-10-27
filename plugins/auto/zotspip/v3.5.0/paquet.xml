@@ -29,6 +29,8 @@
 	<pipeline nom="porte_plume_barre_pre_charger" inclure="zotspip_pipelines.php" />
 	<pipeline nom="porte_plume_lien_classe_vers_icone" inclure="zotspip_pipelines.php" />
 	<pipeline nom="post_boucle" inclure="zotspip_pipelines.php" />
+        <pipeline nom="rechercher_liste_des_champs" inclure="zotspip_pipelines.php" />
+        
 
 	<necessite nom="saisies" />
 
