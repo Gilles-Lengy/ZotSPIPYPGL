@@ -111,6 +111,7 @@ function zotspip_declarer_tables_principales($tables_principales) {
 
     $ztags_cles = array(
         "PRIMARY KEY" => "tag, id_zitem",
+        "KEY id_zitem" => "id_zitem",
         "KEY tag" => "tag"
     );
 
