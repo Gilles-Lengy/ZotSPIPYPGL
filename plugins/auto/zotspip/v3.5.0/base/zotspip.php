@@ -58,7 +58,7 @@ function zotspip_declarer_tables_principales($tables_principales) {
 
     $zitems_cles = array(
         "PRIMARY KEY" => "id_zotspip",
-        "KEY" => "id_zitem",
+        "KEY id_zitem" => "id_zitem",
         "KEY id_parent" => "id_parent"
     );
 
