@@ -53,12 +53,11 @@ function zotspip_declarer_tables_principales($tables_principales) {
         "csljson" => "mediumtext DEFAULT '' NOT NULL",
         "updated" => "varchar(50) DEFAULT '' NOT NULL",
         "date_ajout" => "varchar(50) DEFAULT '' NOT NULL",
-        "id_zotspip" => "bigint(21) NOT NULL", // Ajout GL Artaban
+        "id_zotspip" => "bigint(21) NOT NULL",
     );
 
     $zitems_cles = array(
         "PRIMARY KEY" => "id_zotspip",
-        "KEY id_zitem" => "id_zitem",
         "KEY id_parent" => "id_parent"
     );
 
@@ -111,7 +110,6 @@ function zotspip_declarer_tables_principales($tables_principales) {
 
     $ztags_cles = array(
         "PRIMARY KEY" => "tag, id_zitem",
-        "KEY id_zitem" => "id_zitem",
         "KEY tag" => "tag"
     );
 
