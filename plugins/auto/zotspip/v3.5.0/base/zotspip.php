@@ -16,7 +16,7 @@ function zotspip_declarer_tables_interfaces($interface) {
     $interface['tables_jointures']['spip_zitems'][] = 'zcreators';
     $interface['tables_jointures']['spip_zitems'][] = 'zitems_zcollections';
     $interface['tables_jointures']['spip_zcollections'][] = 'zitems_zcollections';
-    $interface['tables_jointures']['spip_ztags'][] = 'zitems';
+    $interface['tables_jointures']['spip_ztags'][''] = 'zitems';
     $interface['tables_jointures']['spip_zcreators'][] = 'zitems';
 
     return $interface;
@@ -61,9 +61,14 @@ function zotspip_declarer_tables_principales($tables_principales) {
         "KEY id_parent" => "id_parent"
     );
 
+    $join_zitems = array(
+        "id_zitem" => "id_zitem"
+    );
+
     $tables_principales['spip_zitems'] = array(
         'field' => &$zitems,
-        'key' => &$zitems_cles
+        'key' => &$zitems_cles,
+        'join' => &$join_zitems,
     );
 
     //-- Table zcollections -----------------------------------------------------------
@@ -97,9 +102,14 @@ function zotspip_declarer_tables_principales($tables_principales) {
         "KEY auteur" => "auteur"
     );
 
+    $join_zcreators = array(
+        "id_zitem" => "id_zitem"
+    );
+
     $tables_principales['spip_zcreators'] = array(
         'field' => &$zcreators,
-        'key' => &$zcreators_cles
+        'key' => &$zcreators_cles,
+        'join' => &$join_zcreators,
     );
 
     //-- Table ztags -----------------------------------------------------------
@@ -113,9 +123,14 @@ function zotspip_declarer_tables_principales($tables_principales) {
         "KEY tag" => "tag"
     );
 
+    $join_ztags = array(
+        "id_zitem" => "id_zitem"
+    );
+
     $tables_principales['spip_ztags'] = array(
         'field' => &$ztags,
-        'key' => &$ztags_cles
+        'key' => &$ztags_cles,
+        'join' => &$join_ztags,
     );
 
     return $tables_principales;
@@ -133,9 +148,14 @@ function zotspip_declarer_tables_auxiliaires($tables_auxiliaires) {
         "KEY id_zcollection" => "id_zcollection"
     );
 
+    $join_zitems_zcollections = array(
+        "id_zitem" => "id_zitem"
+    );
+
     $tables_auxiliaires['spip_zitems_zcollections'] = array(
         'field' => &$zitems_zcollections,
-        'key' => &$zitems_zcollections_cles
+        'key' => &$zitems_zcollections_cles,
+        'join' => &$join_zitems_zcollections
     );
 
     return $tables_auxiliaires;
