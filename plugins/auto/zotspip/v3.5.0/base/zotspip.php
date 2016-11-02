@@ -25,7 +25,7 @@ function zotspip_declarer_tables_interfaces($interface) {
 function zotspip_declarer_tables_principales($tables_principales) {
     //-- Table zitems -----------------------------------------------------------
     $zitems = array(
-        "id_zitem" => "varchar(16) DEFAULT '' NOT NULL",
+        "id_zitem" => "varchar(16) DEFAULT '' NOT NULL UNIQUE",
         "id_parent" => "varchar(16) DEFAULT '' NOT NULL",
         "type_ref" => "varchar(255) DEFAULT '' NOT NULL",
         "annee" => "smallint(6)",
