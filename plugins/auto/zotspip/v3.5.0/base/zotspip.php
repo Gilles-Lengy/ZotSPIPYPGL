@@ -84,9 +84,14 @@ function zotspip_declarer_tables_principales($tables_principales) {
         "KEY id_parent" => "id_parent"
     );
 
+    $join_zcollections = array(
+        "id_zcollection" => "id_zcollection"
+    );
+
     $tables_principales['spip_zcollections'] = array(
         'field' => &$zcollections,
-        'key' => &$zcollections_cles
+        'key' => &$zcollections_cles,
+        'join' => &$join_zcollections,
     );
 
     //-- Table zcreators -----------------------------------------------------------
@@ -149,7 +154,8 @@ function zotspip_declarer_tables_auxiliaires($tables_auxiliaires) {
     );
 
     $join_zitems_zcollections = array(
-        "id_zitem" => "id_zitem"
+        "id_zitem" => "id_zitem",
+        "id_zcollection" => "id_zcollection"
     );
 
     $tables_auxiliaires['spip_zitems_zcollections'] = array(
@@ -160,5 +166,3 @@ function zotspip_declarer_tables_auxiliaires($tables_auxiliaires) {
 
     return $tables_auxiliaires;
 }
-
-?>
