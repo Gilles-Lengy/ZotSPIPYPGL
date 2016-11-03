@@ -117,17 +117,17 @@
                             [(#REM) Références Zotero ]
                             <B_references_zotero>
                                 <div class="menu">
-                                    #ANCRE_PAGINATION
+                                   
                                     <h2>Références Zotero : (#GRAND_TOTAL)</h2>
                                     <ul class="spip">
-                                        <BOUCLE_references_zotero(ZITEMS) {recherche} {!par points} {pagination 5}>
+                                        <BOUCLE_references_zotero(ZITEMS) {recherche} {!par points}>
                                             [<li>
                                                 <h3><a href="#URL">(#TITRE) / Points : #POINTS</a></h3>
                                                 [<div>(#RESUME)</div>]                                            
                                             </li>]
                                         </BOUCLE_references_zotero>
                                     </ul>
-                                    [<p class="pagination">(#PAGINATION)</p>]
+                                 
                                 </div>
                             </B_references_zotero>
 
