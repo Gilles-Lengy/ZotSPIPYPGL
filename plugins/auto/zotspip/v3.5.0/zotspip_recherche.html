@@ -33,14 +33,12 @@
                             [(#REM) Articles trouves ]
                             <B_articles>
                                 <div class="menu menu_articles">
-                                    #ANCRE_PAGINATION
                                     <h2><:articles:> (#GRAND_TOTAL)</h2>
                                     <ul class="spip">
-                                        <BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination}>
+                                        <BOUCLE_articles(ARTICLES) {recherche} {!par points}>
                                             <li><a href="#URL_ARTICLE">#TITRE</a></li>
                                         </BOUCLE_articles>
                                     </ul>
-                                    [<p class="pagination">(#PAGINATION)</p>]
                                 </div>
                             </B_articles>
 
