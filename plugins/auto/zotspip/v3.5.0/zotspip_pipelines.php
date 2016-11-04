@@ -113,7 +113,7 @@ function replaceTree($search = "", $replace = "", $array = false, $keys_too = fa
 function zotspip_rechercher_liste_des_champs($tables) {
 
     $tables['zitem']['titre'] = 10;
-    $tables['zitem']['resume'] = 7;
+    $tables['zitem']['resume'] = 10;
     $tables['zitem']['id_zitem'] = 5;
 
     $tables['zcollection']['id_zcollection'] = 10;
